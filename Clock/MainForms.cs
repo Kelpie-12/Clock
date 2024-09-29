@@ -16,5 +16,20 @@ namespace Clock
 		{
 			InitializeComponent();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		async void roundButtonUp_Click(object sender, EventArgs e)
+		{
+			for (int i = roundButtonUp.Location.X; i < 345; i++)
+			{
+				roundButtonUp.Location = new Point(i + 1, roundButtonUp.Location.Y);
+				await Task.Delay(1);
+			}
+			roundButtonBack.BackColor = Color.Green;
+		}
 	}
 }
