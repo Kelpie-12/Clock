@@ -13,17 +13,45 @@ namespace Clock.Forms
 {
 	public partial class FormAlarms : Form
 	{
+		
 		public FormAlarms()
 		{
 			InitializeComponent();
 		}
 
-		private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+		private void roundButton1_Click(object sender, EventArgs e)
 		{
-			checkedListBox1.Items.Add(new ToggleButton());
-			panel1.CreateControl();
-			ToggleButton a= new ToggleButton();	
+	
+		}
+
+		private void buttonAddAlarms_Click(object sender, EventArgs e)
+		{
+			ToggleButton a = new ToggleButton(changeCheck1);		
+			int countControl = CountControl(panelAlarms);
+			a.Name = $"Check{CountControl(panelAlarms)+1}";
+			a.Checked = false;
 			
+			a.Location = new Point(changeCheck1.Location.X, changeCheck1.Location.Y+ countControl*50);
+			panelAlarms.Controls.Add(a);
+
+			Label label =  new Label(); 
+			label.Location = new Point(label.Location.X, label.Location.Y + countControl * 50);
+			label.Name = $"Alarm{CountControl(panelAlarms) + 1}";
+			label.Text = "TEST";
+
+			panelAlarms.Controls.Add(label);
+		
+
+		}
+		private int CountControl(Panel panel)
+		{
+			int count = 0;
+			foreach(Control c in panel.Controls) 
+			{
+				if (c.GetType() == typeof(ToggleButton))
+					count++;
+			}
+			return count;
 		}
 	}
 }
