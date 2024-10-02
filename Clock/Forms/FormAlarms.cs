@@ -26,6 +26,8 @@ namespace Clock.Forms
 
 		private void buttonAddAlarms_Click(object sender, EventArgs e)
 		{
+
+
 			ToggleButton a = new ToggleButton(changeCheck1);		
 			int countControl = CountControl(panelAlarms);
 			a.Name = $"Check{CountControl(panelAlarms)+1}";
@@ -35,12 +37,14 @@ namespace Clock.Forms
 			panelAlarms.Controls.Add(a);
 
 			Label label =  new Label(); 
-			label.Location = new Point(label.Location.X, label.Location.Y + countControl * 50);
+			label.Location = new Point(Alarm1.Location.X, Alarm1.Location.Y + countControl * 50);
 			label.Name = $"Alarm{CountControl(panelAlarms) + 1}";
-			label.Text = "TEST";
-
+			label.Text = DateTime.Now.ToString("hh:mm:ss tt");
+			//label.Font.Size 
+			label.Font = new Font("Microsoft Sans Serif", 18);
 			panelAlarms.Controls.Add(label);
 		
+
 
 		}
 		private int CountControl(Panel panel)

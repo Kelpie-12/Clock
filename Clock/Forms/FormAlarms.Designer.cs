@@ -39,9 +39,9 @@
 			// Alarm1
 			// 
 			this.Alarm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Alarm1.Location = new System.Drawing.Point(40, 80);
+			this.Alarm1.Location = new System.Drawing.Point(30, 80);
 			this.Alarm1.Name = "Alarm1";
-			this.Alarm1.Size = new System.Drawing.Size(336, 40);
+			this.Alarm1.Size = new System.Drawing.Size(346, 40);
 			this.Alarm1.TabIndex = 0;
 			this.Alarm1.Text = "ALARMS";
 			// 
@@ -99,7 +99,7 @@
 			this.changeCheck1.Name = "changeCheck1";
 			this.changeCheck1.OffBackColor = System.Drawing.Color.MidnightBlue;
 			this.changeCheck1.OffToggleColor = System.Drawing.Color.DarkGray;
-			this.changeCheck1.OnBackColor = System.Drawing.Color.MidnightBlue;
+			this.changeCheck1.OnBackColor = System.Drawing.Color.DarkSeaGreen;
 			this.changeCheck1.OnToggleColor = System.Drawing.Color.Lime;
 			this.changeCheck1.Size = new System.Drawing.Size(100, 40);
 			this.changeCheck1.SolidStyle = true;

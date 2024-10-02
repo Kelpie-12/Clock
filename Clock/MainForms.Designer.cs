@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.panelMenu = new System.Windows.Forms.Panel();
 			this.buttonClose = new System.Windows.Forms.Button();
 			this.buttonSetting = new System.Windows.Forms.Button();
@@ -37,13 +38,16 @@
 			this.panelLogo = new System.Windows.Forms.Panel();
 			this.btnHome = new System.Windows.Forms.PictureBox();
 			this.panelTitleBar = new System.Windows.Forms.Panel();
+			this.lblTitleChildForm = new System.Windows.Forms.Label();
 			this.panelShafow = new System.Windows.Forms.Panel();
 			this.panelDesktop = new System.Windows.Forms.Panel();
-			this.lblTitleChildForm = new System.Windows.Forms.Label();
+			this.homeTime = new System.Windows.Forms.Label();
+			this.timerHome = new System.Windows.Forms.Timer(this.components);
 			this.panelMenu.SuspendLayout();
 			this.panelLogo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
 			this.panelTitleBar.SuspendLayout();
+			this.panelDesktop.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelMenu
@@ -193,6 +197,17 @@
 			this.panelTitleBar.TabIndex = 5;
 			this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
 			// 
+			// lblTitleChildForm
+			// 
+			this.lblTitleChildForm.AutoSize = true;
+			this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lblTitleChildForm.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.lblTitleChildForm.Location = new System.Drawing.Point(25, 24);
+			this.lblTitleChildForm.Name = "lblTitleChildForm";
+			this.lblTitleChildForm.Size = new System.Drawing.Size(52, 20);
+			this.lblTitleChildForm.TabIndex = 0;
+			this.lblTitleChildForm.Text = "Home";
+			// 
 			// panelShafow
 			// 
 			this.panelShafow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
@@ -204,22 +219,27 @@
 			// 
 			// panelDesktop
 			// 
+			this.panelDesktop.Controls.Add(this.homeTime);
 			this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelDesktop.Location = new System.Drawing.Point(200, 71);
 			this.panelDesktop.Name = "panelDesktop";
 			this.panelDesktop.Size = new System.Drawing.Size(520, 379);
 			this.panelDesktop.TabIndex = 7;
 			// 
-			// lblTitleChildForm
+			// homeTime
 			// 
-			this.lblTitleChildForm.AutoSize = true;
-			this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.lblTitleChildForm.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.lblTitleChildForm.Location = new System.Drawing.Point(25, 24);
-			this.lblTitleChildForm.Name = "lblTitleChildForm";
-			this.lblTitleChildForm.Size = new System.Drawing.Size(52, 20);
-			this.lblTitleChildForm.TabIndex = 0;
-			this.lblTitleChildForm.Text = "Home";
+			this.homeTime.AutoSize = true;
+			this.homeTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.homeTime.Location = new System.Drawing.Point(158, 136);
+			this.homeTime.Name = "homeTime";
+			this.homeTime.Size = new System.Drawing.Size(0, 73);
+			this.homeTime.TabIndex = 0;
+			// 
+			// timerHome
+			// 
+			this.timerHome.Enabled = true;
+			this.timerHome.Interval = 500;
+			this.timerHome.Tick += new System.EventHandler(this.timerHome_Tick);
 			// 
 			// MainForm
 			// 
@@ -240,6 +260,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
 			this.panelTitleBar.ResumeLayout(false);
 			this.panelTitleBar.PerformLayout();
+			this.panelDesktop.ResumeLayout(false);
+			this.panelDesktop.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -257,6 +279,8 @@
 		private System.Windows.Forms.Panel panelShafow;
 		private System.Windows.Forms.Panel panelDesktop;
 		private System.Windows.Forms.Label lblTitleChildForm;
+		private System.Windows.Forms.Label homeTime;
+		private System.Windows.Forms.Timer timerHome;
 	}
 }
 

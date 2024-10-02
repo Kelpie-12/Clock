@@ -45,7 +45,7 @@ namespace Clock.Custom_Controls
 			path.StartFigure();
 			path.AddArc(leftArc, 90, 180);
 			path.AddArc(rightArc, 270, 180);
-			path.CloseFigure();
+			path.CloseFigure();			
 			return path;
 		}
 

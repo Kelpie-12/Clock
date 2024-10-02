@@ -20,6 +20,7 @@ namespace Clock
 		public MainForm()
 		{
 			InitializeComponent();
+			homeTime.Text = DateTime.Now.ToString("HH:mm:ss");
 			leftBorderBtn = new Panel();
 			leftBorderBtn.Size = new Size(7, 60);
 			panelMenu.Controls.Add(leftBorderBtn);
@@ -117,7 +118,8 @@ namespace Clock
 
 		private void btnHome_Click(object sender, EventArgs e)
 		{
-			currentChildForm.Close();
+			if (currentChildForm!=null)
+				currentChildForm.Close();
 			Reset();
 		}
 		private void Reset()
@@ -140,6 +142,11 @@ namespace Clock
 		private void buttonClose_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void timerHome_Tick(object sender, EventArgs e)
+		{
+			homeTime.Text = DateTime.Now.ToString("HH:mm:ss");
 		}
 	}
 }

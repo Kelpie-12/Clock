@@ -49,6 +49,12 @@
     <Compile Include="Custom Controls\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\FormAlarmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAlarmDialog.Designer.cs">
+      <DependentUpon>FormAlarmDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAlarms.cs">
       <SubType>Form</SubType>
     </Compile>
