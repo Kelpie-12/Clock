@@ -31,6 +31,7 @@
 			this.Alarm1 = new System.Windows.Forms.Label();
 			this.panelAlarms = new System.Windows.Forms.Panel();
 			this.buttonAddAlarms = new System.Windows.Forms.Button();
+			this.customDateTimePicker1 = new Clock.Custom_Controls.CustomDateTimePicker();
 			this.buttonChenge = new Clock.RoundButton();
 			this.changeCheck1 = new Clock.Custom_Controls.ToggleButton();
 			this.panelAlarms.SuspendLayout();
@@ -47,6 +48,7 @@
 			// 
 			// panelAlarms
 			// 
+			this.panelAlarms.Controls.Add(this.customDateTimePicker1);
 			this.panelAlarms.Controls.Add(this.buttonChenge);
 			this.panelAlarms.Controls.Add(this.buttonAddAlarms);
 			this.panelAlarms.Controls.Add(this.changeCheck1);
@@ -72,6 +74,21 @@
 			this.buttonAddAlarms.Text = "+";
 			this.buttonAddAlarms.UseVisualStyleBackColor = true;
 			this.buttonAddAlarms.Click += new System.EventHandler(this.buttonAddAlarms_Click);
+			// 
+			// customDateTimePicker1
+			// 
+			this.customDateTimePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
+			this.customDateTimePicker1.BorderSize = 1;
+			this.customDateTimePicker1.CustomFormat = "dd:MM:yyyy HH:mm:ss";
+			this.customDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+			this.customDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.customDateTimePicker1.Location = new System.Drawing.Point(83, 198);
+			this.customDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+			this.customDateTimePicker1.Name = "customDateTimePicker1";
+			this.customDateTimePicker1.Size = new System.Drawing.Size(164, 35);
+			this.customDateTimePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
+			this.customDateTimePicker1.TabIndex = 5;
+			this.customDateTimePicker1.TextColor = System.Drawing.Color.White;
 			// 
 			// buttonChenge
 			// 
@@ -129,5 +146,6 @@
 		private System.Windows.Forms.Panel panelAlarms;
 		private System.Windows.Forms.Button buttonAddAlarms;
 		private RoundButton buttonChenge;
+		private Custom_Controls.CustomDateTimePicker customDateTimePicker1;
 	}
 }

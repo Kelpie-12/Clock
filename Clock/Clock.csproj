@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom Controls\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Custom Controls\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -90,6 +93,9 @@
     <Compile Include="Custom Controls\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\FormAlarmDialog.resx">
+      <DependentUpon>FormAlarmDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAlarms.resx">
       <DependentUpon>FormAlarms.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

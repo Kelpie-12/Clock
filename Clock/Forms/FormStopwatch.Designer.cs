@@ -37,7 +37,7 @@
 			// StopwatchLabel
 			// 
 			this.StopwatchLabel.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.StopwatchLabel.ForeColor = System.Drawing.Color.White;
+			this.StopwatchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
 			this.StopwatchLabel.Location = new System.Drawing.Point(-7, 71);
 			this.StopwatchLabel.Name = "StopwatchLabel";
 			this.StopwatchLabel.Size = new System.Drawing.Size(530, 120);
@@ -108,7 +108,6 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(520, 379);
 			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.stopButton);
